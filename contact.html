@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+	<meta name="description" content="Contact form">
+	<meta name="keywords" content="Contact, Contact form">
+	<meta name="author" content="Dalia Sireikyte">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navigation">
+            <ul>
+                <li><a href="index.html" title="Home">Home</a></li>
+                <li><a href="contact.html" title="Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+  <body>
+    <main class="contact-container">
+        
+        <form id="contact-form">
+            <label>Name
+                <input name="name" placeholder="Your full name required" id="name">
+            </label>
+            <div class="form-error" id="nameError">Please enter your  full name</div>
+            <label>Subject
+                <input name="subject" placeholder="Enter minimum 10 characters" id="subject">
+            </label>
+            <div class="form-error" id="subjectError">Subject must be at least 10 characters long</div>
+            <label>Email
+                <input name="email" placeholder="Your email address" id="email">
+            </label>
+            <div class="form-error" id="emailError">Please enter a valid email address</div>
+            <label>Address
+                <input name="address" placeholder="Your address (minimum 25 characters)" id="address">
+            </label>
+            <div class="form-error" id="addressError">Address must be at least 25 characters long</div>
+            <button >Submit</button>
+            <div id="message"></div>
+        </form>
+      
+    </main>
+
+    <script src="js/contact.js"></script>
+
+    
+  </body>
+</html>
