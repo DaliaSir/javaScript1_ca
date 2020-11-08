@@ -8,7 +8,7 @@ const emailError = document.querySelector("#emailError");
 const address = document.querySelector("#address");
 const addressError = document.querySelector("#addressError");
 
-function validateForm() {
+function validateForm(event) {
   event.preventDefault();
 
   if (checkLength(name.value, 1) === true) {

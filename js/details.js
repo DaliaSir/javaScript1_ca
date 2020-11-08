@@ -28,12 +28,14 @@ fetchArticle();
 
 function createHTML(details) {
   detailContainer.innerHTML = `
-    <h3>${details[0].title}</h3>
+    <h2>${details[0].title}</h2>
     <div class="image" style="background-image: url(${details[0].image});"></div> 
-    <p>${details[0].text}</p>
-    <p>Sourse: <i>${details[0].site}</i></p>
-    <p>${details[0].publishedDate}</p> 
-    <a href="${details[0].url}">Read the full article..</a> 
+    <div>${details[0].text}</div>
+    <div class="articleDetails"><b>Sourse:</b> ${details[0].site}
+    <i class="fas fa-grip-lines-vertical"></i>
+    <b>Published:</b> ${details[0].publishedDate}</div>
+    
+    <a href="${details[0].url}" class="linkToArticle">Read the full article..</a> 
     `;
   document.title = `${details[0].title}`;
 }

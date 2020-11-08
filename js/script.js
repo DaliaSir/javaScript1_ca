@@ -1,6 +1,6 @@
 const resultsContainer = document.querySelector(".results");
 const url =
-  "https://financialmodelingprep.com/api/v3/stock_news?tickers=AAPL,FB,GOOG,AMZN&apikey=2e601abefa88525eba76e4eb0170fe51";
+  "https://financialmodelingprep.com/api/v3/stock_news?limit=50&apikey=2e601abefa88525eba76e4eb0170fe51";
 
 async function fetchNews() {
   try {
@@ -10,12 +10,16 @@ async function fetchNews() {
     resultsContainer.innerHTML = "";
     json.forEach(function (article) {
       resultsContainer.innerHTML += `
+      <div class="articleContainer">
       <a href="details.html?id=${article.symbol}">
-        <h3>${article.title}</h>
+        <h2>${article.title}</h2>
         <div class="image" style="background-image: url(${article.image});"></div>
-        <div><i>${article.site}</i></div>
-        <div>${article.publishedDate}</div>
-      </a>        
+        <div class="articleDetails"><b>Source:</b> ${article.site} 
+        <i class="fas fa-grip-lines-vertical"></i>
+        <b>Published:</b> ${article.publishedDate}</div>
+        
+      </a> 
+      </div>       
         `;
     });
   } catch (error) {
